@@ -8,6 +8,7 @@
   background-color: rgba(3, 27, 49, 0.212);
   top: 0px;
   padding: 20px;
+  z-index:5;
 }
 svg {
   height: 16px;
