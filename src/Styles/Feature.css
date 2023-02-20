@@ -30,3 +30,17 @@
 .card p {
   flex-basis: 50%;
 }
+
+@media screen and (max-width: 768px) {
+  .Feature {
+    height: max-content;
+    flex-wrap: wrap;
+  }
+  .Feature div {
+    flex-basis: 100% !important;
+  }
+  .Feature .card {
+    flex-basis: 100%;
+    flex-direction: column;
+  }
+}
