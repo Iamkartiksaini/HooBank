@@ -9,7 +9,7 @@ const Footer = () => {
       <button>Request Early Access</button>
       <div className="contact">
         <div className="logo">
-          <h1>GTP-3</h1>
+          <h1>GPT-3</h1>
           <p>
             Crechterwoord K12 182 DK Alknjkcb,
             <br /> All Rights Reserved
@@ -18,6 +18,7 @@ const Footer = () => {
         <div className="links">
           <div className="link-item">
             <p>Links</p>
+            <hr />
             <p>Overons</p>
             <p>Social Media</p>
             <p>Counters</p>
@@ -26,6 +27,7 @@ const Footer = () => {
           {/* <==== Third Column */}
           <div className="link-item">
             <p>Company </p>
+            <hr />
             <p>Terms & Conditions</p>
             <p>Privacy Policy</p>
             <p>Contact</p>
@@ -34,6 +36,7 @@ const Footer = () => {
 
           <div className="link-item">
             <p> Get in touch </p>
+            <hr />
             <p>GPt-3@gmail.com</p>
             <p>085-132567</p>
             <p>info@payme.net </p>
