@@ -1,0 +1,96 @@
+.Hero {
+    padding: 0px 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    height: 100vh;
+    align-items: center;
+
+    .textSection {
+        flex-basis: 40%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 30px;
+
+        p {
+            color: var(--commentText);
+        }
+
+        .discount {
+            display: flex;
+            width: 400px;
+            height: 40px;
+            padding: 5px 0px;
+            border-radius: 5px;
+            background: var(--cardBg);
+            align-items: center;
+            justify-content: space-around;
+
+            img {
+                height: auto;
+                width: min-content;
+            }
+        }
+
+        .title {
+            color: white;
+            position: relative;
+
+            h2 {
+                border: 2px solid #33bbcf;
+                padding: 40px;
+                position: absolute;
+                right: 10%;
+                border-radius: 50%;
+
+                &::before {
+                    position: inherit;
+                    left: 10%;
+                    top: 42%;
+                    font-size: 12px;
+                    width: inherit;
+                    content: "Get Started";
+                    height: max-content;
+                }
+            }
+        }
+    }
+
+    >img {
+        flex-basis: 40%;
+        height: auto;
+        width: 44vw;
+        object-fit: cover;
+    }
+
+    .details {
+        flex-basis: 100%;
+        display: flex;
+        justify-content: space-between;
+        padding: 20px;
+        background: rgba(54, 52, 52, 0.651);
+
+        div {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            flex-basis: 32%;
+            justify-content: center;
+
+
+            h2 {
+                color: white;
+            }
+
+            .gradientText {
+                font-size: 14px;
+            }
+
+            &:nth-of-type(2) {
+                border-left: 1px solid white;
+                border-right: 1px solid white;
+            }
+        }
+    }
+}
