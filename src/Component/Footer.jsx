@@ -1,49 +1,46 @@
 import React from "react";
+import { logo } from "../assets";
+import "../Styles/Footer.scss";
 
 const Footer = () => {
   return (
     <div className="Footer">
-      <h1>
-        Do you want to step in to the <br /> future before others
-      </h1>
-      <button>Request Early Access</button>
       <div className="contact">
         <div className="logo">
-          <h1>GPT-3</h1>
-          <p>
-            Crechterwoord K12 182 DK Alknjkcb,
-            <br /> All Rights Reserved
+          <img src={logo} alt="" />
+          <p className="comment">
+            A new way to make the payments easy, reliable and secure.
           </p>
         </div>
         <div className="links">
           <div className="link-item">
-            <p>Links</p>
+            <p className="white">Links</p>
             <hr />
-            <p>Overons</p>
-            <p>Social Media</p>
-            <p>Counters</p>
-            <p>Contact</p>
+            <p className="comment">Overons</p>
+            <p className="comment">Social Media</p>
+            <p className="comment">Counters</p>
+            <p className="comment">Contact</p>
           </div>
           {/* <==== Third Column */}
           <div className="link-item">
-            <p>Company </p>
+            <p className="white">Company </p>
             <hr />
-            <p>Terms & Conditions</p>
-            <p>Privacy Policy</p>
-            <p>Contact</p>
+            <p className="comment">Terms & Conditions</p>
+            <p className="comment">Privacy Policy</p>
+            <p className="comment">Contact</p>
           </div>
           {/* <==== fourth Column */}
 
           <div className="link-item">
-            <p> Get in touch </p>
+            <p className="white"> Get in touch </p>
             <hr />
-            <p>GPt-3@gmail.com</p>
-            <p>085-132567</p>
-            <p>info@payme.net </p>
+            <p className="comment">GPt-3@gmail.com</p>
+            <p className="comment">085-132567</p>
+            <p className="comment">info@payme.net </p>
           </div>
         </div>
       </div>
-      <p>© 2021 GPT-3. All rights reserved.</p>
+      <p className="comment">Copyright © 2021 HooBank. All Rights Reserved.</p>
     </div>
   );
 };
