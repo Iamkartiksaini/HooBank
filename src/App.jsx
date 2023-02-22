@@ -1,24 +1,19 @@
+import { useState } from "react";
 import "./App.css";
-import Feature from "./Component/Feature";
+import Ad from "./Component/Ad";
 import Footer from "./Component/Footer";
-import Header from "./Component/Header";
-import Intro from "./Component/Intro";
-import Product from "./Component/Product";
-import Upcomings from "./Component/Upcomings";
-import WhatisGPT from "./Component/WhatisGPT";
+import Header from "./Component/Header.jsx";
+import Hero from "./Component/Hero";
 
-const App = () => {
+function App() {
   return (
-    <>
+    <div className="MainContainer">
       <Header />
-      <Intro />
-      <WhatisGPT />
-      <Feature />
-      <Product />
-      <Upcomings />
+      <Hero />
+      <Ad />
       <Footer />
-    </>
+    </div>
   );
-};
+}
 
 export default App;

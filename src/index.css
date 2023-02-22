@@ -1,128 +1,67 @@
-@font-face {
-  font-family: "Mulish";
-  src: local("Mulish"), url("./Styles/Fonts/static/Mulish-Medium.ttf");
-}
-
 :root {
-  --font-family: "Manrope", sans-serif;
-  --gradient-text: linear-gradient(89.97deg, #ae67fa 1.84%, #f49867 102.67%);
-  --gradient-bar: linear-gradient(103.22deg, #ae67fa -13.86%, #f49867 99.55%);
-  --color-bg: #040c18;
-  --color-footer: #031b34;
-  --color-blog: #042c54;
-  --color-text: #81afdd;
-  --color-subtext: #ff8a71;
+  --font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+* {
   margin: 0px;
   padding: 0px;
   box-sizing: border-box;
-  transition: 0.5s;
-
   scroll-behavior: smooth;
-}
+  --primaryBG: linear-gradient(to right, #272727, #11101d);
+  --commentText: #ffffffb2;
+  --SecondryBG: radial-gradient(
+    circle at center,
+    #def9fa 0.89%,
+    #bef3f5 17.23%,
+    #9dedf0 42.04%,
+    #7de7eb 55.12%,
+    #5ce1e6 71.54%,
+    #33bbcf 100%
+  );
+  --cardBg: linear-gradient(to bottom, #272727 0%, #11101d 100%);
+  --gtpLinear: linear-gradient(
+    to bottom,
+    #def9fa 100%,
+    #bef3f5 100%,
+    #9dedf0 100%,
+    #7de7eb 100%,
+    #5ce1e6 100%,
+    #33bbcf 100%
+  );
 
+  --footerBG: rgba(11, 10, 12, 0.6);
+}
 body {
-  font-family: "Mulish";
-  background: rgb(8, 21, 41);
+  background: rgb(39, 39, 39);
   background: linear-gradient(
-      0deg,
-      rgba(8, 21, 41, 1) 3%,
-      rgba(3, 27, 52, 1) 15%,
-      rgba(4, 44, 84, 1) 100%
-    )
-    no-repeat cover;
-  color: aliceblue;
-  overflow-x: hidden;
-}
-#root {
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
-}
-.flex {
-  display: flex;
-}
-.fdir {
-  flex-direction: column;
-}
-.jcb {
-  justify-content: space-between;
-}
-.aic {
-  align-items: center;
+    0deg,
+    rgba(39, 39, 39, 1) 3%,
+    rgba(17, 16, 29, 1) 15%
+  );
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  font-family: "Mulish";
 }
 
-.Footer {
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  gap: 20px;
-  flex-wrap: wrap;
+.MainContainer {
+  overflow-x: hidden;
 }
-.Footer > h1 {
-  text-align: center;
+.gradientText {
   color: transparent;
-  background-image: linear-gradient(10deg, #ae67fa 1.84%, #f49867 102.67%);
+  background-image: radial-gradient(
+    50% 50%,
+    #def9fa 0.89%,
+    #bef3f5 17.23%,
+    #9dedf0 42.04%,
+    #7de7eb 55.12%,
+    #5ce1e6 71.54%,
+    #33bbcf 100%
+  );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  font-size: 3rem;
 }
-.Footer button {
-  background: transparent;
-  padding: 20px 45px;
+.white {
   color: white;
-  border: 1px solid white;
-  transition: 0.2s ease-in-out;
 }
-.Footer button:hover {
-  text-decoration: underline;
-  border: 1px solid transparent;
-}
-.contact {
-  display: flex;
-  width: 100%;
-  /* flex-wrap: wrap; */
-  padding: 20px;
-}
-.contact .logo {
-  flex-basis: 60%;
-  padding: 20px;
-}
-
-.links {
-  display: flex;
-  justify-content: space-between;
-  flex-basis: 100%;
-  flex-wrap: wrap;
-}
-.links .link-item p {
-  transition: 0.2s ease-in-out;
-}
-.links .link-item p:nth-of-type(1) ~ p {
-  border-bottom: 1px solid transparent;
-}
-.links .link-item p:nth-of-type(1) ~ p:hover {
-  color: var(--color-text);
-  border-bottom: 1px solid var(--color-text);
-}
-
-@media screen and (max-width: 768px) {
-  .contact {
-    justify-content: center;
-    flex-direction: column;
-  }
-  .contact .logo {
-    flex-basis: 100%;
-    text-align: center;
-  }
-  .contact .links {
-    justify-content: space-evenly;
-  }
-}
-@media screen and (max-width: 480px) {
-  .contact .links {
-    flex-direction: column;
-    justify-content: space-evenly;
-  }
+.comment {
+  color: var(--commentText);
 }
