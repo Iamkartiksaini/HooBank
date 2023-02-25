@@ -1,10 +1,15 @@
 .Hero {
-    padding: 0px 40px;
+    padding: 20px 40px;
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-around;
-    height: 100vh;
+    justify-content: space-between;
     align-items: center;
+    margin-top: 80px;
+
+    >.HeroImg {
+        height: auto;
+        width: 50%;
+    }
 
     .textSection {
         flex-basis: 40%;
@@ -19,7 +24,7 @@
 
         .discount {
             display: flex;
-            width: 400px;
+            max-width: 400px;
             height: 40px;
             padding: 5px 0px;
             border-radius: 5px;
@@ -41,8 +46,10 @@
                 border: 2px solid #33bbcf;
                 padding: 40px;
                 position: absolute;
-                right: 10%;
+                right: 8%;
+                top: 0%;
                 border-radius: 50%;
+                transition: .3s ease-in-out;
 
                 &::before {
                     position: inherit;
@@ -53,44 +60,47 @@
                     content: "Get Started";
                     height: max-content;
                 }
+
+                &:hover {
+                    box-shadow: 0px 0px 15px 2px #1ed9bb;
+                    background-color: #33bbcf;
+                    color: black;
+                }
             }
         }
+
     }
 
-    >img {
-        flex-basis: 40%;
-        height: auto;
-        width: 44vw;
-        object-fit: cover;
-    }
+
 
     .details {
         flex-basis: 100%;
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        margin: 20px 0px;
         padding: 20px;
         background: rgba(54, 52, 52, 0.651);
+        flex-wrap: wrap;
+        gap: 20px;
+        border-radius: 10px;
 
         div {
             display: flex;
             align-items: center;
             gap: 10px;
-            flex-basis: 32%;
             justify-content: center;
-
+            padding: 0px 10px;
 
             h2 {
                 color: white;
+                font-size: 1em;
+
             }
 
             .gradientText {
-                font-size: 14px;
+                font-size: .7em;
             }
 
-            &:nth-of-type(2) {
-                border-left: 1px solid white;
-                border-right: 1px solid white;
-            }
         }
     }
 }
