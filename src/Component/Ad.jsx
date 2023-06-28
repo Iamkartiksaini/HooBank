@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useLayoutEffect } from "react";
+import { ScrollTrigger } from "gsap/all";
 import "../Styles/Ad.scss";
 import {
   star,
@@ -17,7 +18,7 @@ import {
   airbnb,
   dropbox,
 } from "../assets";
-
+import { gsap } from "gsap";
 const Ad = () => {
   const feedCard = [
     {
@@ -39,6 +40,52 @@ const Ad = () => {
       img: people03,
     },
   ];
+
+  useLayoutEffect(() => {
+    let tl = gsap.timeline({
+      scrollTrigger: {
+        trigger: ".card",
+        start: "-=200 center",
+        end: "+=500 center",
+        markers: true,
+        toggleActions: "play none resume reset",
+      },
+    });
+
+    tl.fromTo(
+      ".card",
+      {
+        x: 150,
+        y: 100,
+        opacity: 0,
+        scale: 0.4,
+      },
+      {
+        stagger: 0.1,
+        ease: "elastic",
+        y: 0,
+        x: 0,
+        scale: 1,
+        opacity: 1,
+      }
+    ).fromTo(
+      ".brands img",
+      {
+        x: 150,
+        y: 100,
+        scale: 0.4,
+        opacity: 0,
+      },
+      {
+        stagger: 0.1,
+        ease: "power1.out",
+        y: 0,
+        x: 0,
+        scale: 1,
+        opacity: 1,
+      }
+    );
+  }, []);
 
   return (
     <>
@@ -132,7 +179,7 @@ const Ad = () => {
       <div className="card-feed">
         {feedCard.map((value, index) => {
           return (
-            <div className="card" key={index}>
+            <div className="card" key={`card-${index}`}>
               <img src={quotes} alt="" />
               <p className="comment">{value.text}</p>
               <div className="profile">

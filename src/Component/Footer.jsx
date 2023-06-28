@@ -16,27 +16,27 @@ const Footer = () => {
           <div className="link-item">
             <p className="white">Links</p>
             <hr />
-            <p className="comment">Overons</p>
-            <p className="comment">Social Media</p>
-            <p className="comment">Counters</p>
-            <p className="comment">Contact</p>
+            <p>Overons</p>
+            <p>Social Media</p>
+            <p>Counters</p>
+            <p>Contact</p>
           </div>
           {/* <==== Third Column */}
           <div className="link-item">
             <p className="white">Company </p>
             <hr />
-            <p className="comment">Terms & Conditions</p>
-            <p className="comment">Privacy Policy</p>
-            <p className="comment">Contact</p>
+            <p>Terms & Conditions</p>
+            <p>Privacy Policy</p>
+            <p>Contact</p>
           </div>
           {/* <==== fourth Column */}
 
           <div className="link-item">
             <p className="white"> Get in touch </p>
             <hr />
-            <p className="comment">GPt-3@gmail.com</p>
-            <p className="comment">085-132567</p>
-            <p className="comment">info@payme.net </p>
+            <p>GPt-3@gmail.com</p>
+            <p>085-132567</p>
+            <p>info@payme.net </p>
           </div>
         </div>
       </div>

@@ -6,6 +6,7 @@
     justify-content: space-between;
     gap: 20px;
     flex-wrap: wrap;
+    background-color: #0b0a0c99;
 
     .contact {
         display: flex;
@@ -14,7 +15,7 @@
         padding: 20px;
 
         .logo {
-            flex-basis: 50%;
+            flex-basis: 40%;
             padding: 20px;
 
             img {
@@ -24,14 +25,23 @@
         }
 
         .links {
-            flex-basis: 50%;
+            flex-basis: 60%;
             display: flex;
             gap: 20px;
             justify-content: space-around;
 
             .link-item {
+                cursor: pointer;
+
+
                 p {
+                    transition: .2s;
                     margin: 8px 0px;
+                    color: var(--commentText);
+
+                    &:hover {
+                        color: white !important;
+                    }
                 }
             }
         }

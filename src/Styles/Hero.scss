@@ -9,6 +9,7 @@
     >.HeroImg {
         height: auto;
         width: 50%;
+        animation: updown 5s infinite ease-in-out;
     }
 
     .textSection {
@@ -17,6 +18,28 @@
         flex-direction: column;
         justify-content: center;
         gap: 30px;
+
+        &::before {
+            content: "";
+            padding: 40px;
+            position: absolute;
+            right: 10%;
+            top: 25%;
+            border-radius: 50%;
+            transition: 0.3s ease-in-out;
+            height: 20px;
+            width: 20px;
+            z-index: 99;
+            box-shadow: 0px 0px 25px 2px #66e2e7;
+            background-color: #66e2e7;
+            color: black;
+            animation-name: updown;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-fill-mode: backwards;
+            animation-direction: reverse;
+            animation-delay: 1s;
+        }
 
         p {
             color: var(--commentText);
@@ -43,13 +66,13 @@
             position: relative;
 
             h2 {
-                border: 2px solid #33bbcf;
+                box-shadow: 0px 0px 5px 1px #33bbcf;
                 padding: 40px;
                 position: absolute;
                 right: 8%;
                 top: 0%;
                 border-radius: 50%;
-                transition: .3s ease-in-out;
+                transition: 0.3s ease-in-out;
 
                 &::before {
                     position: inherit;
@@ -62,16 +85,19 @@
                 }
 
                 &:hover {
-                    box-shadow: 0px 0px 15px 2px #1ed9bb;
-                    background-color: #33bbcf;
+                    box-shadow: 0px 0px 25px 2px #1ed9bb;
+                    background-color: #66e2e7;
                     color: black;
                 }
             }
         }
-
     }
 
-
+    .actB {
+        color: black;
+        background-color: #33bbcf;
+        box-shadow: 0px 0px 25px 2px #1ed9bb !important;
+    }
 
     .details {
         flex-basis: 100%;
@@ -94,13 +120,17 @@
             h2 {
                 color: white;
                 font-size: 1em;
-
             }
 
             .gradientText {
-                font-size: .7em;
+                font-size: 0.7em;
             }
-
         }
+    }
+}
+
+@keyframes updown {
+    50% {
+        transform: translateY(30px);
     }
 }

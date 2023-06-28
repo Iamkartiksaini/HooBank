@@ -145,7 +145,7 @@
         transition: .2s ease-in-out;
 
         &:hover {
-            background: #323232;
+            background: #3232322d;
         }
 
         img {
@@ -175,20 +175,25 @@
     justify-content: space-around;
     align-items: center;
     padding: 20px;
+    margin: 5vh 0px;
 
     img {
-        width: 15%;
+        width: 12%;
         height: auto;
         object-fit: scale-down;
     }
 }
 
 .get-started {
-    background-color: var(--primaryBG);
+    background: linear-gradient(194deg, #272727, #11101d);
     padding: 20px;
+    margin: 5vh 40px;
     display: flex;
     align-items: center;
     justify-content: space-around;
+    border-radius: 15px;
+    flex-wrap: wrap;
+    gap: 20px;
 
     span {
         flex-basis: 40%;
