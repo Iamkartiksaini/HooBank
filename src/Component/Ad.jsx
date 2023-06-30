@@ -42,10 +42,12 @@ const Ad = () => {
   ];
 
   useLayoutEffect(() => {
+    gsap.registerPlugin(ScrollTrigger);
+
     let tl = gsap.timeline({
       scrollTrigger: {
-        trigger: ".card",
-        start: "-=200 center",
+        trigger: ".feed .white",
+        start: "top center",
         end: "+=500 center",
         markers: true,
         toggleActions: "play none resume reset",
@@ -71,6 +73,7 @@ const Ad = () => {
     ).fromTo(
       ".brands img",
       {
+        onUpdate: (self) => console.log("direction:", self.direction),
         x: 150,
         y: 100,
         scale: 0.4,

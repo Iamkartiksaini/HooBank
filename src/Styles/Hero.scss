@@ -6,10 +6,39 @@
     align-items: center;
     margin-top: 80px;
 
-    >.HeroImg {
-        height: auto;
-        width: 50%;
-        animation: updown 5s infinite ease-in-out;
+    >.heroImgWrapper {
+        flex-basis: 50%;
+        position: relative;
+
+        svg {
+            visibility: hidden;
+            position: absolute;
+            left: 0%;
+        }
+
+        h1 {
+            position: absolute;
+            border-radius: 50%;
+            height: 100px;
+            width: 100px;
+            z-index: 9;
+            background: #FFF;
+            box-shadow: 17px -19px 15px 33px rgba(37, 240, 255, 0.43) inset, 88px -82px 35px -81px #119cddb4 inset;
+            // animation-name: updown;
+            // animation-duration: 5s;
+            // animation-iteration-count: infinite;
+            // animation-fill-mode: backwards;
+            // animation-direction: reverse;
+            // animation-delay: 1s;
+
+        }
+
+        .HeroImg {
+            height: auto;
+            width: 100%;
+            object-fit: cover;
+            animation: updown 5s infinite ease-in-out;
+        }
     }
 
     .textSection {
@@ -19,27 +48,7 @@
         justify-content: center;
         gap: 30px;
 
-        &::before {
-            content: "";
-            padding: 40px;
-            position: absolute;
-            right: 10%;
-            top: 25%;
-            border-radius: 50%;
-            transition: 0.3s ease-in-out;
-            height: 20px;
-            width: 20px;
-            z-index: 99;
-            box-shadow: 0px 0px 25px 2px #66e2e7;
-            background-color: #66e2e7;
-            color: black;
-            animation-name: updown;
-            animation-duration: 5s;
-            animation-iteration-count: infinite;
-            animation-fill-mode: backwards;
-            animation-direction: reverse;
-            animation-delay: 1s;
-        }
+
 
         p {
             color: var(--commentText);
