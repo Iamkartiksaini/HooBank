@@ -34,7 +34,6 @@ const Hero = () => {
       },
       duration: 10,
       repeat: -1,
-      yoyo: true,
     });
     const x = gsap.fromTo(
       "p",
